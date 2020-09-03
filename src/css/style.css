@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.poppins, .montserrat{
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    line-height: 100%;
+}
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-image: url("../img/background.png");
+    background-size: 100%;
+}
+
+.back-static, .back-moveable{
+    position: fixed;
+    z-index: 1;
+}
+.back-moveable{ z-index: 2; }
+#back1{ top: calc(50% - 425.5px); }
+#back2{ top: calc(50% - 390px); right: 0px;}
+#backMoveable1{ top: calc(50% - 318.5px); transform: translate(var(--x, 0px), var(--y, 0px));}
+#backMoveable2{ top: calc(50% - 293px); right: 0px;  transform: translate(var(--x, 0px), var(--y, 0px));}
