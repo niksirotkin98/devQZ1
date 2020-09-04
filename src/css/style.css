@@ -13,7 +13,7 @@
     --main-title-size: 48px;
     --sub-title-size: 18px;
     
-    --content-min-width: 1368px;
+    --content-min-width: 1200px;
     --article-max-width: 1000px;
     --article-min-width: 700px;
 
@@ -107,9 +107,10 @@ article{
     width: 135px;
     height: 62px;
 }
+.arrow-down{ position: relative; }
 .arrow-down::after {
-    position: relative;
-    top: var(--mrg-t-l);
+    position: absolute;
+    top: 40px;
     left: calc(50% - 5.5px);
     content: "";
     display: block;
