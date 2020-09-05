@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 :root{
     --color-0: #525252;
@@ -163,11 +164,117 @@ div.gender{
     margin-top: 65%;
     font-size: 18px;
 }
+
 footer{
-    position: absolute;
-    bottom: 50px;
     width: 100%;
+    padding-bottom: 50px;
 }
 .footer-text{
     font-size: 14px;
+}
+
+.status-bar-container{
+    --status: "12%";
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 90px;
+    padding: 0 30px;
+
+    width: 55%;
+    height: 90px;
+    max-width: var(--article-max-width);
+    min-width: var(--article-min-width);
+
+    background: #F0F1F5;
+    box-shadow: -8.90123px -8.90123px 26.7037px #FFFFFF, 13.3518px 13.3518px 26.7037px rgba(174, 174, 192, 0.4);
+    border-radius: 7
+}
+.status-bar-container::before{
+    position: absolute;
+    top: -42px;
+    left: calc(50% - 168px / 2);
+    width: 168px;
+    height: 42px;
+    content: var(--status);
+    display: inline-block;
+    background: url(../img/wave.svg);
+    text-align: center;
+    padding-top: 12px;
+    box-sizing: border-box;
+}
+.status-bar-container > button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    margin: 15px 0;
+    border-radius: 50px;
+    background: var(--color-3);
+    font-size: 18px;
+}
+.status-bar{
+    --max-count: 6.0;
+    --current-count: 1.0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    position: relative;
+    top: -20px;
+
+    height: 50px;
+    width: calc(100% - 360px);
+    margin: 0 30px;
+    padding-left: calc(((100% - 420px) / var(--max-count)));
+    border-bottom: 2px solid #cccccc;
+}
+.status-bar::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: calc(100% / var(--max-count) * var(--current-count));
+    height: 2px;
+    background: linear-gradient(88.33deg, #FB4F4F -7.64%, #FFCD1E 145.94%);;
+}
+.status-bar > li{
+    --color: #cccccc;
+    --content: "physical activity";
+    position: relative;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    padding: 3px; 
+    background: var(--color);
+    box-sizing: border-box;
+    border-radius: 18px;
+}
+.status-bar > li.active::before{
+    position: absolute;
+    top: -27px;
+    left: -91px;
+    content: var(--content);
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+}
+.status-bar > li::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: white;
+    display: block;
+}
+.status-bar > li.active{
+    --color: linear-gradient(88.33deg, #FB4F4F -7.64%, #FFCD1E 145.94%);
+}
+.status-bar > li:first-of-type{
 }
