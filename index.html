@@ -17,10 +17,10 @@
             <a class="logo">
                 <img src="src/img/logo.svg">
             </a>
-            <article>
+            <article style="display: none;">
                 <h1 class="main-title poppins t-center mrg-t-h f-bold">Find out how much weight<br>you'll lose with our</h1>
                 <p class="main-title poppins t-center mrg-t-l f-light italic">Easy <span class="color-1">Keto Meal Plan</span></p>
-                <span class="sub-title montserrat t-center mrg-t-h f-bold color-2 arrow-down">SELECT YOUR GENDER</span>
+                <span class="main-sub-title montserrat t-center mrg-t-h f-bold color-2 arrow-down">SELECT YOUR GENDER</span>
                 <div class="gender-choose mrg-t-h">
                     <div class="gender-icon female">
                         <div>
@@ -40,8 +40,45 @@
                     </div>
                 </div>
             </article>
+
+            <!--First Q: What's your level of daily activity?-->
+            <article>
+                <span class="title poppins t-center mrg-t-g f-bold">What's your level of daily activity?</span>
+                <span class="sub-title montserrat t-center mrg-t-l f-light color-5">(Select one only)</span>
+                <ul class="grid-2 montserrat f-bold t-center  mrg-t-h">
+                    <li class="icon-title-text active">
+                        <div>
+                            <img src="./src/img/icon-q1-4.svg">
+                            <span>Inactive</span>
+                            <span class="f-semibold">Very little daily activity</span>
+                        </div>
+                    </li>
+                    <li class="icon-title-text">
+                        <div>
+                            <img src="./src/img/icon-q1-3.svg">
+                            <span>Light</span>
+                            <span class="f-semibold">Desk job with occasional walks</span>
+                        </div>
+                    </li>
+                    <li class="icon-title-text">
+                        <div>
+                            <img src="./src/img/icon-q1-1.svg">
+                            <span>Moderate</span>
+                            <span class="f-semibold">Active day job or regular exercise</span>
+                        </div>
+                    </li>
+                    <li class="icon-title-text">
+                        <div>
+                            <img src="./src/img/icon-q1-2.svg">
+                            <span>Heavy</span>
+                            <span class="f-semibold">Intense daily activity or exercise</span>
+                        </div>
+                    </li>
+                </ul>
+                <!--button class="next-button montserrat f-bold color-3 mrg-t-h">Next</button-->
+            </article>
             
-            <div class="status-bar-container montserrat mrg-t-h f-bold color-3">
+            <div class="status-bar-container montserrat mrg-t-u f-bold color-3">
                 <button class="montserrat f-semibold t-center color-0">&#8592 Back</button>
                 <ul class="status-bar f-light color-4">
                     <li class="active"></li>
@@ -54,7 +91,7 @@
                 <button class="montserrat f-semibold t-center color-0">Help</button>
             </div>
         </div>
-        <footer>
+        <footer style="display: none;">
             <p class="footer-text montserrat f-normal color-4 t-center">
                 *Results vary depending on your starting point, goals, and effort.<br>
                 The average participant can expect to lose 1-2 lbs/week.<br><br>
